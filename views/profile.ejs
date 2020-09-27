@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+
+<div class="container align-items-center">
+  <h1>Hi there, this is profile page</h1>
+  <div>
+    <h2><%= data.name %></h2>
+    <h2><%= data.email %></h2>
+    <h2><%= data.interest %></h2>
+    <h2><%= data.year %></h2>
+  </div>
+  <div>
+    <form action="/" method="get">
+      <label class="custom-file">Profile Pic </label>
+      <input
+        type="file"
+        name="user[profile_pic]"
+        id="profile_pic"
+        placeholder="Profile Pic"
+        class="custom-file-input"
+        aria-describedby="fileHelpId"
+      />
+      <button class="custom-file" type="submit">upload</button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') -%>

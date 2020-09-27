@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- scripts for bootstrap and jquery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDLo9Cc9zmRW6_iMI1dRULMbMc9QGiPCIg",
+        authDomain: "peer-connect-16fe4.firebaseapp.com",
+        databaseURL: "https://peer-connect-16fe4.firebaseio.com",
+        projectId: "peer-connect-16fe4",
+        storageBucket: "peer-connect-16fe4.appspot.com",
+        messagingSenderId: "796469026635",
+        appId: "1:796469026635:web:c9afde34286e208218d2ce",
+        measurementId: "G-FTB36QTNJ9",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      var database = firebase.database();
+    </script>
+  </head>
+  <body></body>
+</html>

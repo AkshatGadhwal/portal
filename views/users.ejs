@@ -1,0 +1,11 @@
+<%- include('partials/header') -%>
+
+<div class="container align-items-center justify-content-center">
+  <% let keys = Object.keys(data) %> <% keys.forEach((key)=>{ %>
+  <a href="/user/<%= key %>"><%= data[key].name %></a><br />
+  <%})%>
+</div>
+
+<div></div>
+
+<%- include('partials/footer') -%>

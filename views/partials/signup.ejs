@@ -1,0 +1,12 @@
+<%- include('header') -%>
+
+<form method="POST" action="/user/signup">
+  <input type="text" placeholder="name" name="user[name]" />
+  <!--user['field'] will create an object user with fiels as a key. this form will send this object in the body and the object can be retrived by req.body.user -->
+  <input type="email" placeholder="email" name="user[email]" />
+  <input type="text" placeholder="interest" name="user[interest]" />
+  <input type="number" placeholder="year of study" name="user[year]" />
+  <button type="submit">Sign Up</button>
+</form>
+
+<%- include('footer') -%>
