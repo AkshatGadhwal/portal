@@ -5,7 +5,7 @@ const express = require("express"),
   app = express();
 
 //seting up firebase sdk. it will be called first of all as this app.js will sun first of all.
-var serviceAccount = require("./firebase/peer-connect-16fe4-e036def79cc0.json");
+var serviceAccount = require("./firebase_key/peer-connect-16fe4-e036def79cc0.json");
 var firebaseAdmin = admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://peer-connect-16fe4.firebaseio.com",
