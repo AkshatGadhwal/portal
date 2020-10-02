@@ -1,9 +1,11 @@
-const { admin, db } = require("../util/admin");
+const { admin, db, firebase } = require("../util/admin");
 
-const config = require("../util/config");
+config = require("../util/config");
 
-const firebase = require("firebase");
-firebase.initializeApp(config);
+//================================================================================================
+//firebase is initialized in admin.js and exported from there, because otherwise it has to be ////////initialized in both index.js and user.js and this will throw error.
+// const firebase = require("firebase");
+// firebase.initializeApp(config);
 
 const {
   validateSignupData,
@@ -13,6 +15,7 @@ const {
 
 // Sign users up
 exports.signup = (req, res) => {
+  console.log(req.body);
   const newUser = {
     email: req.body.email,
     password: req.body.password,

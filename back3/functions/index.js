@@ -1,7 +1,19 @@
 /* eslint-disable promise/always-return */
 const functions = require("firebase-functions");
-const app = require("express")();
+
+//================================================================================================
+//firebase is initialized in admin.js and exported from there, because otherwise it has to be ////////initialized in both index.js and user.js and this will throw error.
+// const config = require("./util/config");
+// const firebase = require("firebase");
+// firebase.initializeApp(config);
+const { firebase } = require("./util/admin");
+
+const app = require("express")(),
+  bodyParser = require("body-parser");
 const FBAuth = require("./util/fbAuth");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const cors = require("cors");
 app.use(cors());
@@ -164,3 +176,9 @@ exports.onScreamDelete = functions.firestore
       })
       .catch((err) => console.error(err));
   });
+
+// app.listen("3000", () => {
+//   console.log("app is started...");
+// });
+
+firebase.functions().useFunctionsEmulator("http://localhost:5001");
